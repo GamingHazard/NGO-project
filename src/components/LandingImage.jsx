@@ -3,7 +3,7 @@ import React from "react";
 import "w3-css/w3.css";
 import { Link } from "react-router-dom";
 
-const LandingImage = () => {
+const LandingImage = ({ Prof }) => {
   const ImageStyle = {
     backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.8)), url("https://images.squarespace-cdn.com/content/v1/5e59534753bf613bfd6fed36/1601957618548-7GQL5TKNEA7IMZK0JKE6/ke17ZwdGBToddI8pDm48kGPVK--wGoWXJsqwlxbZlQN7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5enfxu_O4VeONvneR-F6W8oeFhFqSrYyNrfPB9Y70_gvQ/annie-spratt-OIuCXxx08yg-unsplash.jpg")`,
     backgroundSize: "cover",
@@ -29,17 +29,18 @@ const LandingImage = () => {
     padding: 0,
     display: "flex",
     justifyContent: "space-evenly",
-    flex: 1,
   };
 
   const liStyle = {
     display: "inline",
-    marginRight: "10px",
+    marginRight: "30px",
+    gap: 20,
   };
 
   const linkStyle = {
     textDecoration: "none",
     color: "white",
+    fontSize: "1.5rem",
   };
 
   const linkHoverStyle = {
@@ -95,7 +96,7 @@ const LandingImage = () => {
             </li>
             <li style={liStyle}>
               <Link
-                to="/profile"
+                onClick={Prof}
                 style={linkStyle}
                 onMouseOver={(e) =>
                   (e.target.style = { ...linkStyle, ...linkHoverStyle })
