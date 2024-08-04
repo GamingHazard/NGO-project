@@ -1,0 +1,45 @@
+ /* Reset default styling */
+ ul {
+   padding: 0;
+   margin: 0;
+ }
+
+ /* Footer styling */
+ footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #eff1f7;
+   color: #333;
+   padding: 3% 10px;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ /* Footer features */
+ .footer__features ul {
+   list-style: none;
+ }
+
+ .footer__features ul li {
+   margin-top: 5px;
+ }
+
+ /* Social icons styling */
+ .footer__socials>* {
+   color: #333;
+   margin-left: 7px;
+ }
+
+ /* Responsive design for smaller screens */
+ @media only screen and (max-width: 600px) {
+   footer {
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .footer__items {
+     margin-top: 20px;
+   }
+ }
